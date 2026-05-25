@@ -1,175 +1,267 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zambak Boşnak Kadınlar Derneği</title>
+  <title>Zambak Association</title>
 
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
   <style>
+    :root {
+      --pink: #f8d7e3;
+      --pink-soft: #fff1f6;
+      --green: #b9d8c2;
+      --text: #2f2f2f;
+      --muted: #666;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #fafafa;
-      color: #333;
-      line-height: 1.6;
+      background: var(--pink-soft);
+      color: var(--text);
     }
 
     .container {
-      max-width: 800px;
+      max-width: 860px;
       margin: auto;
       padding: 60px 20px;
     }
 
-    h1 {
-      text-align: center;
-      font-size: 40px;
+    /* TOP BAR */
+    .topbar {
+      display: flex;
+      justify-content: flex-end;
       margin-bottom: 10px;
     }
 
-    .subtitle {
-      text-align: center;
-      color: #666;
-      margin-bottom: 50px;
-      font-size: 18px;
-    }
-
-    .card {
-      background: #fff;
-      padding: 30px;
-      border-radius: 18px;
-      margin-bottom: 25px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
-    }
-
-    h2 {
-      margin-top: 0;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 12px 18px;
-      background: #1f6feb;
-      color: white;
-      text-decoration: none;
-      border-radius: 10px;
-      font-weight: bold;
-      margin-top: 12px;
-    }
-
-    .button:hover {
-      opacity: 0.9;
-    }
-
-    .bank-box {
-      background: #f7f7f7;
-      border-left: 4px solid #1f6feb;
-      padding: 15px;
-      margin-top: 15px;
-      border-radius: 10px;
-      overflow-wrap: break-word;
+    .lang-btn {
+      border: 1px solid var(--green);
+      background: white;
+      padding: 8px 14px;
+      border-radius: 999px;
+      cursor: pointer;
       font-size: 14px;
     }
 
-    .socials {
+    /* HEADER */
+    .header {
       text-align: center;
-      margin-top: 40px;
-    }
-
-    .socials a {
-      color: #444;
-      margin: 0 12px;
-      font-size: 26px;
-      text-decoration: none;
-    }
-
-    .socials a:hover {
-      opacity: 0.7;
-    }
-
-    .highlight {
-      font-weight: bold;
+      margin-bottom: 40px;
     }
 
     .logo {
-      display: block;
-      margin: 0 auto 20px auto;
       width: 90px;
       height: 90px;
       border-radius: 50%;
       object-fit: cover;
+      border: 2px solid var(--green);
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 40px;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      margin-top: 8px;
+      line-height: 1.5;
+    }
+
+    /* CARD */
+    .card {
+      background: white;
+      border: 1px solid var(--green);
+      border-radius: 18px;
+      padding: 26px;
+      margin-bottom: 18px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 18px;
+    }
+
+    p {
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* CTA */
+    .cta-wrap {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 10px;
+    }
+
+    .button {
+      background: linear-gradient(135deg, var(--pink), var(--green));
+      border: none;
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      color: #2f2f2f;
+    }
+
+    /* BANK */
+    .bank {
+      background: #f9f9f9;
+      border-left: 4px solid var(--green);
+      padding: 14px;
+      border-radius: 12px;
+      font-size: 14px;
+      margin-top: 10px;
+      white-space: pre-line;
+    }
+
+    /* SOCIAL */
+    .socials {
+      text-align: center;
+      margin-top: 35px;
+    }
+
+    .socials a {
+      color: var(--muted);
+      margin: 0 10px;
+      font-size: 22px;
     }
   </style>
 </head>
 
 <body>
 
-  <div class="container">
+<div class="container">
 
-    <!-- LOGO (GitHub placeholder) -->
+  <!-- LANGUAGE BUTTON -->
+  <div class="topbar">
+    <button class="lang-btn" onclick="switchLang()">EN / TR / BS</button>
+  </div>
+
+  <!-- HEADER -->
+  <div class="header">
+
+    <!-- LOGO PLACEHOLDER -->
     <img class="logo"
       src="https://YOUR-GITHUB-USERNAME.github.io/YOUR-REPO/logo.png"
-      alt="Zambak Logo">
+      alt="Logo">
 
-    <h1>Zambak</h1>
+    <h1 id="title">Zambak</h1>
 
-    <p class="subtitle">
-      Bosniak Women Association Zambak<br>
-      Udruženje žena Zambak
-    </p>
+    <div class="subtitle" id="subtitle"></div>
+  </div>
 
-    <div class="card">
-      <h2>Hoş Geldiniz</h2>
-      <p>
-        Zambak Kadınlar Derneği’ne hoş geldiniz. Dayanışma ve kültür odaklı bir topluluktur.
-      </p>
-    </div>
+  <!-- ABOUT -->
+  <div class="card">
+    <h2 id="aboutTitle"></h2>
+    <p id="aboutText"></p>
+  </div>
 
-    <div class="card">
-      <h2>Üyelik Başvuru</h2>
-      <p>Formu doldurarak üyelik başvurusu yapabilirsiniz.</p>
+  <!-- CTA -->
+  <div class="card">
+    <h2 id="joinTitle"></h2>
+    <p id="joinText"></p>
 
+    <div class="cta-wrap">
       <a class="button"
         href="https://docs.google.com/forms/d/e/1FAIpQLSeEeUXeQR8ubRFosRM4pdYFWVAwRiPpDk_MGUVF4lbLkR-faA/viewform"
-        target="_blank">
-        Başvuru Formu
-      </a>
+        target="_blank"
+        id="ctaBtn"></a>
     </div>
-
-    <div class="card">
-      <h2>Üyelik Aidatı</h2>
-      <p><span class="highlight">1000 TL</span> yıllık aidat.</p>
-
-      <div class="bank-box">
-        TR97 0001 5001 5800 7318 6567 32<br><br>
-        Zambak Boşnak Kadınlar Derneği<br><br>
-        Açıklama: üyelik aidatı – Ad Soyad
-      </div>
-    </div>
-
-    <div class="card">
-      <h2>Bağışlar</h2>
-      <p>Destekleriniz bizim için önemlidir.</p>
-
-      <div class="bank-box">
-        TR97 0001 5001 5800 7318 6567 32<br><br>
-        Açıklama: bağış – Ad Soyad
-      </div>
-    </div>
-
-    <div class="socials">
-      <a href="https://www.youtube.com/@zambak2591" target="_blank">
-        <i class="fab fa-youtube"></i>
-      </a>
-
-      <a href="https://instagram.com/zambak.bkd" target="_blank">
-        <i class="fab fa-instagram"></i>
-      </a>
-    </div>
-
   </div>
+
+  <!-- MEMBERSHIP -->
+  <div class="card">
+    <h2 id="bankTitle"></h2>
+
+    <p id="bankPurpose"></p>
+
+    <div class="bank">
+Vakıf Bank, Çukurambar Şubesi
+HESAP NO (TL): 00158007318656732
+IBAN: TR970001500158007318656732
+
+Zambak Boşnak Kadınlar Derneği
+
+Açıklama: üyelik / bağış – Ad Soyad
+    </div>
+  </div>
+
+  <!-- SOCIAL -->
+  <div class="socials">
+    <a href="https://www.youtube.com/@zambak2591" target="_blank">
+      <i class="fab fa-youtube"></i>
+    </a>
+
+    <a href="https://instagram.com/zambak.bkd" target="_blank">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+
+</div>
+
+<script>
+let lang = "en";
+
+const content = {
+  en: {
+    subtitle: "Bosniak Women Association Zambak<br>Women • Culture • Community",
+    aboutTitle: "Welcome",
+    aboutText: "Zambak Association brings women together through culture, solidarity and shared identity.",
+    joinTitle: "Membership",
+    joinText: "You can apply for membership by filling out the form below.",
+    ctaBtn: "Apply Now",
+    bankTitle: "Bank Information",
+    bankPurpose: "Membership fees or donations can be made to the account below."
+  },
+
+  tr: {
+    subtitle: "Boşnak Kadınlar Derneği Zambak<br>Kadın • Kültür • Dayanışma",
+    aboutTitle: "Hoş Geldiniz",
+    aboutText: "Zambak Derneği kadınları kültür, dayanışma ve ortak değerler etrafında birleştirir.",
+    joinTitle: "Üyelik",
+    joinText: "Aşağıdaki formu doldurarak üyelik başvurusu yapabilirsiniz.",
+    ctaBtn: "Başvuru Yap",
+    bankTitle: "Banka Bilgileri",
+    bankPurpose: "Üyelik aidatı veya bağışlar aşağıdaki hesaba yapılabilir."
+  },
+
+  bs: {
+    subtitle: "Udruženje žena Zambak<br>Kultura • Zajedništvo • Žene",
+    aboutTitle: "Dobrodošli",
+    aboutText: "Zambak okuplja žene kroz kulturu, solidarnost i zajedničke vrijednosti.",
+    joinTitle: "Članstvo",
+    joinText: "Možete se prijaviti putem obrasca ispod.",
+    ctaBtn: "Prijava",
+    bankTitle: "Bankovni Podaci",
+    bankPurpose: "Članarina ili donacije mogu se uplatiti na račun ispod."
+  }
+};
+
+function render() {
+  document.getElementById("subtitle").innerHTML = content[lang].subtitle;
+  document.getElementById("aboutTitle").innerText = content[lang].aboutTitle;
+  document.getElementById("aboutText").innerText = content[lang].aboutText;
+  document.getElementById("joinTitle").innerText = content[lang].joinTitle;
+  document.getElementById("joinText").innerText = content[lang].joinText;
+  document.getElementById("ctaBtn").innerText = content[lang].ctaBtn;
+  document.getElementById("bankTitle").innerText = content[lang].bankTitle;
+  document.getElementById("bankPurpose").innerText = content[lang].bankPurpose;
+}
+
+function switchLang() {
+  lang = lang === "en" ? "tr" : lang === "tr" ? "bs" : "en";
+  render();
+}
+
+render();
+</script>
 
 </body>
 </html>
