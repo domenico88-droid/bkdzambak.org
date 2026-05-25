@@ -106,6 +106,13 @@ p{color:var(--muted); line-height:1.7;}
 .cta-wrap{
   display:flex;
   justify-content:flex-end;
+  <div class="cta-wrap">
+  <a class="button"
+     href="https://docs.google.com/forms/d/e/1FAIpQLSeEeUXeQR8ubRFosRM4pdYFWVAwRiPpDk_MGUVF4lbLkR-faA/viewform"
+     target="_blank"
+     id="ctaBtn">
+  </a>
+</div>
 }
 
 .button{
@@ -116,6 +123,7 @@ p{color:var(--muted); line-height:1.7;}
   color:#2f2f2f;
   font-weight:bold;
 }
+  
 
 /* BANK */
 .bank{
@@ -142,6 +150,31 @@ p{color:var(--muted); line-height:1.7;}
   .hero{flex-direction:column;}
   .hero-left{height:300px;}
 }
+  /* SOCIALS */
+.socials{
+  display:flex;
+  gap:18px;
+  margin-top:10px;
+}
+
+.socials a{
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:white;
+  border:1px solid var(--green);
+  color:var(--text);
+  text-decoration:none;
+  transition:0.25s ease;
+}
+
+.socials a:hover{
+  transform:translateY(-2px);
+  background:var(--pink);
+}
 </style>
 </head>
 
@@ -156,7 +189,7 @@ p{color:var(--muted); line-height:1.7;}
 <!-- LEFT HERO IMAGE -->
 <div class="hero-left">
   <img src="https://domenico88-droid.github.io/bkdzambak.org/hero2.jpg"
-  alt="Zambak Women Group">
+  alt="Zambak Bosniak Women Association">
 </div>
 
 <!-- RIGHT CONTENT -->
@@ -206,6 +239,27 @@ Açıklama: üyelik / bağış – Ad Soyad
     <p>bkd.zambak@gmail.com</p>
   </div>
 
+<!-- SOCIALS -->
+<div class="card">
+  <h2>Social</h2>
+
+  <div class="socials">
+
+    <a href="https://www.instagram.com/zambak.bkd/"
+       target="_blank"
+       aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="https://www.youtube.com/@zambak2591"
+       target="_blank"
+       aria-label="YouTube">
+      <i class="fab fa-youtube"></i>
+    </a>
+
+  </div>
+</div>
+  
 </div>
 </div>
 
@@ -216,7 +270,8 @@ const content={
 en:{
 subtitle:"Bosniak Women Association Zambak",
 aboutTitle:"Welcome",
-aboutText:`"Zambak" is a platform that brings women and their families together around shared values and preserving identity. By employing knowledge and quality, we aim to enrich society through socio-cultural engagement.`,
+aboutText:`"Zambak" is a platform that brings Bosniak women together around shared values and preserving identity. 
+By employing knowledge and quality, we aim to enrich society through socio-cultural engagement.`,
 joinTitle:"Membership",
 joinText:"Become a member of Zambak! Apply using the form below.",
 ctaBtn:"Apply Now",
@@ -245,7 +300,7 @@ aboutTitle:"Dobrodošli",
 aboutText:`"Zambak" okuplja žene porijeklom iz Bosne i Hercegovine, Sandžaka i regije oko zajedničkih vrijednosti i očuvanja identiteta.`,
 joinTitle:"Članstvo",
 joinText:"Postanite članica Zambaka! Prijavite se putem obrasca.",
-ctaBtn:"Prijava",
+ctaBtn:"Prijavi se",
 bankTitle:"Bankovni Podaci",
 bankPurpose:"Članarina ili donacije.",
 contactTitle:"Kontakt",
