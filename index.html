@@ -3,38 +3,209 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zambak Boşnak Kadınlar Derneği
-</title>
+  <title>Zambak Boşnak Kadınlar Derneği</title>
 
-  <!-- Font Awesome Icons -->
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
   <style>
+    :root {
+      --pink: #f7c6d0;
+      --green: #cfe8d5;
+      --text: #2e2e2e;
+      --muted: #6f6f6f;
+      --card: #ffffff;
+      --bg: #fafafa;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f8f6f2;
-      color: #333;
-      line-height: 1.6;
+      font-family: "Arial", sans-serif;
+      background: linear-gradient(135deg, #fff 0%, #fafafa 40%, #fdf7f9 100%);
+      color: var(--text);
     }
 
     .container {
-      max-width: 800px;
+      max-width: 860px;
       margin: auto;
-      padding: 60px 20px;
+      padding: 70px 20px;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .logo {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 18px;
+      border: 3px solid var(--pink);
+      background: white;
     }
 
     h1 {
-      text-align: center;
-      font-size: 42px;
-      margin-bottom: 10px;
+      margin: 0;
+      font-size: 40px;
+      letter-spacing: 0.5px;
     }
 
     .subtitle {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* Cards */
+    .card {
+      background: var(--card);
+      padding: 28px;
+      border-radius: 18px;
+      margin-bottom: 22px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      border: 1px solid rgba(0,0,0,0.04);
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 20px;
+    }
+
+    p {
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* Button */
+    .button {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      background: linear-gradient(135deg, var(--pink), var(--green));
+      color: #2e2e2e;
+      font-weight: bold;
+      transition: 0.2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    /* Bank box */
+    .bank {
+      margin-top: 14px;
+      padding: 16px;
+      border-radius: 12px;
+      background: #f7f7f7;
+      border-left: 4px solid var(--green);
+      font-size: 14px;
+      color: var(--text);
+    }
+
+    /* Footer socials */
+    .socials {
       text-align: center;
-      color: #666;
-      margin-bottom: 50px;
+      margin-top: 40px;
+    }
+
+    .socials a {
+      margin: 0 10px;
+      font-size: 22px;
+      color: var(--muted);
+      transition: 0.2s;
+    }
+
+    .socials a:hover {
+      color: var(--text);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+
+      <!-- LOGO PLACEHOLDER (GitHub raw link goes here) -->
+      <img class="logo"
+        src="https://YOUR-GITHUB-USERNAME.github.io/YOUR-REPO/logo.png"
+        alt="Zambak Logo">
+
+      <h1>Zambak</h1>
+
+      <div class="subtitle">
+        Bosniak Women Association Zambak<br/>
+        Udruženje žena Zambak
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <div class="card">
+      <h2>Hoş Geldiniz</h2>
+      <p>
+        Zambak Kadınlar Derneği, dayanışma, kültür ve topluluk ruhunu birlikte yaşatmayı amaçlar.
+        Kadınların sosyal ve kültürel alanda güçlenmesini destekler.
+      </p>
+    </div>
+
+    <!-- FORM -->
+    <div class="card">
+      <h2>Üyelik</h2>
+      <p>Derneğimize katılmak için başvuru formunu doldurabilirsiniz.</p>
+
+      <a class="button"
+        href="https://docs.google.com/forms/d/e/1FAIpQLSeEeUXeQR8ubRFosRM4pdYFWVAwRiPpDk_MGUVF4lbLkR-faA/viewform"
+        target="_blank">
+        Başvuru Formunu Aç
+      </a>
+    </div>
+
+    <!-- MEMBERSHIP -->
+    <div class="card">
+      <h2>Üyelik Aidatı</h2>
+      <p><strong>1000 TL</strong> yıllık üyelik aidatıdır.</p>
+
+      <div class="bank">
+        TR97 0001 5001 5800 7318 6567 32<br/><br/>
+        Zambak Boşnak Kadınlar Sosyal Kültürel ve Yardımlaşma Derneği<br/><br/>
+        Açıklama: üyelik aidatı – Ad Soyad
+      </div>
+    </div>
+
+    <!-- DONATION -->
+    <div class="card">
+      <h2>Bağışlar</h2>
+      <p>Destekleriniz faaliyetlerimizin devamlılığı için önemlidir.</p>
+
+      <div class="bank">
+        TR97 0001 5001 5800 7318 6567 32<br/><br/>
+        Açıklama: bağış – Ad Soyad
+      </div>
+    </div>
+
+    <!-- SOCIALS -->
+    <div class="socials">
+      <a href="https://www.youtube.com/@zambak2591" target="_blank">
+        <i class="fab fa-youtube"></i>
+      </a>
+
+      <a href="https://instagram.com/zambak.bkd" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+
+  </div>
+
+</body>
+</html>      margin-bottom: 50px;
       font-size: 18px;
     }
 
