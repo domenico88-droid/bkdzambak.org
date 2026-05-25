@@ -96,23 +96,22 @@ h1{
   border-radius:16px;
   padding:22px;
   margin-bottom:16px;
+  animation:fade 0.6s ease;
 }
 
-h2{margin-top:0;}
+h2{
+  margin-top:0;
+}
 
-p{color:var(--muted); line-height:1.7;}
+p{
+  color:var(--muted);
+  line-height:1.7;
+}
 
 /* CTA */
 .cta-wrap{
   display:flex;
   justify-content:flex-end;
-  <div class="cta-wrap">
-  <a class="button"
-     href="https://docs.google.com/forms/d/e/1FAIpQLSeEeUXeQR8ubRFosRM4pdYFWVAwRiPpDk_MGUVF4lbLkR-faA/viewform"
-     target="_blank"
-     id="ctaBtn">
-  </a>
-</div>
 }
 
 .button{
@@ -122,8 +121,12 @@ p{color:var(--muted); line-height:1.7;}
   text-decoration:none;
   color:#2f2f2f;
   font-weight:bold;
+  transition:0.25s ease;
 }
-  
+
+.button:hover{
+  transform:translateY(-2px);
+}
 
 /* BANK */
 .bank{
@@ -135,22 +138,7 @@ p{color:var(--muted); line-height:1.7;}
   font-size:14px;
 }
 
-/* ANIMATION */
-.card{
-  animation:fade 0.6s ease;
-}
-
-@keyframes fade{
-  from{opacity:0; transform:translateY(10px);}
-  to{opacity:1; transform:translateY(0);}
-}
-
-/* RESPONSIVE */
-@media(max-width:900px){
-  .hero{flex-direction:column;}
-  .hero-left{height:300px;}
-}
-  /* SOCIALS */
+/* SOCIALS */
 .socials{
   display:flex;
   gap:18px;
@@ -169,11 +157,35 @@ p{color:var(--muted); line-height:1.7;}
   color:var(--text);
   text-decoration:none;
   transition:0.25s ease;
+  font-size:20px;
 }
 
 .socials a:hover{
   transform:translateY(-2px);
   background:var(--pink);
+}
+
+/* ANIMATION */
+@keyframes fade{
+  from{
+    opacity:0;
+    transform:translateY(10px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero{
+    flex-direction:column;
+  }
+
+  .hero-left{
+    height:300px;
+  }
 }
 </style>
 </head>
@@ -181,46 +193,57 @@ p{color:var(--muted); line-height:1.7;}
 <body>
 
 <div class="topbar">
-<button class="lang-btn" onclick="switchLang()">EN / TR / BS</button>
+  <button class="lang-btn" onclick="switchLang()">EN / TR / BS</button>
 </div>
 
 <div class="hero">
 
-<!-- LEFT HERO IMAGE -->
-<div class="hero-left">
-  <img src="https://domenico88-droid.github.io/bkdzambak.org/hero2.jpg"
-  alt="Zambak Bosniak Women Association">
-</div>
-
-<!-- RIGHT CONTENT -->
-<div class="hero-right">
-
-  <img class="logo"
-  src="https://domenico88-droid.github.io/bkdzambak.org/logo.jpg"
-  alt="logo">
-
-  <h1>ZAMBAK</h1>
-  <div class="subtitle" id="subtitle"></div>
-
-  <div class="card">
-    <h2 id="aboutTitle"></h2>
-    <p id="aboutText"></p>
+  <!-- LEFT HERO IMAGE -->
+  <div class="hero-left">
+    <img
+      src="https://domenico88-droid.github.io/bkdzambak.org/hero2.jpg"
+      alt="Zambak Bosniak Women Association">
   </div>
 
-  <div class="card">
-    <h2 id="joinTitle"></h2>
-    <p id="joinText"></p>
+  <!-- RIGHT CONTENT -->
+  <div class="hero-right">
 
-    <div class="cta-wrap">
-      <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSeEeUXeQR8ubRFosRM4pdYFWVAwRiPpDk_MGUVF4lbLkR-faA/viewform" id="ctaBtn"></a>
+    <img class="logo"
+      src="https://domenico88-droid.github.io/bkdzambak.org/logo.jpg"
+      alt="logo">
+
+    <h1>ZAMBAK</h1>
+
+    <div class="subtitle" id="subtitle"></div>
+
+    <!-- ABOUT -->
+    <div class="card">
+      <h2 id="aboutTitle"></h2>
+      <p id="aboutText"></p>
     </div>
-  </div>
 
-  <div class="card">
-    <h2 id="bankTitle"></h2>
-    <p id="bankPurpose"></p>
+    <!-- MEMBERSHIP -->
+    <div class="card">
+      <h2 id="joinTitle"></h2>
+      <p id="joinText"></p>
 
-    <div class="bank">
+      <div class="cta-wrap">
+        <a
+          class="button"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSeEeUXeQR8ubRFosRM4pdYFWVAwRiPpDk_MGUVF4lbLkR-faA/viewform"
+          target="_blank"
+          rel="noopener noreferrer"
+          id="ctaBtn">
+        </a>
+      </div>
+    </div>
+
+    <!-- BANK -->
+    <div class="card">
+      <h2 id="bankTitle"></h2>
+      <p id="bankPurpose"></p>
+
+      <div class="bank">
 Zambak Boşnak Kadınlar Derneği
 
 Vakıf Bank, Çukurambar Şubesi
@@ -230,100 +253,146 @@ HESAP NO (TL): 00158007318656732
 IBAN: TR970001500158007318656732
 
 Açıklama: üyelik / bağış – Ad Soyad
+      </div>
     </div>
+
+    <!-- CONTACT -->
+    <div class="card">
+      <h2 id="contactTitle"></h2>
+      <p id="contactText"></p>
+
+      <p>
+        <a href="mailto:bkd.zambak@gmail.com">
+          bkd.zambak@gmail.com
+        </a>
+      </p>
+    </div>
+
+    <!-- SOCIALS -->
+    <div class="card">
+      <h2>Social</h2>
+
+      <div class="socials">
+
+        <a
+          href="https://www.instagram.com/zambak.bkd/"
+          target="_blank"
+          aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+
+        <a
+          href="https://www.youtube.com/@zambak2591"
+          target="_blank"
+          aria-label="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+
+      </div>
+    </div>
+
   </div>
-
-  <div class="card">
-    <h2 id="contactTitle"></h2>
-    <p id="contactText"></p>
-    <p>bkd.zambak@gmail.com</p>
-  </div>
-
-<!-- SOCIALS -->
-<div class="card">
-  <h2>Social</h2>
-
-  <div class="socials">
-
-    <a href="https://www.instagram.com/zambak.bkd/"
-       target="_blank"
-       aria-label="Instagram">
-      <i class="fab fa-instagram"></i>
-    </a>
-
-    <a href="https://www.youtube.com/@zambak2591"
-       target="_blank"
-       aria-label="YouTube">
-      <i class="fab fa-youtube"></i>
-    </a>
-
-  </div>
-</div>
-  
-</div>
 </div>
 
 <script>
 let lang="en";
 
-const content={
+const content = {
+
 en:{
 subtitle:"Bosniak Women Association Zambak",
+
 aboutTitle:"Welcome",
-aboutText:`"Zambak" is a platform that brings Bosniak women together around shared values and preserving identity. 
+
+aboutText:`"Zambak" is a platform that brings Bosniak women together around shared values and preserving identity.
 By employing knowledge and quality, we aim to enrich society through socio-cultural engagement.`,
+
 joinTitle:"Membership",
+
 joinText:"Become a member of Zambak! Apply using the form below.",
+
 ctaBtn:"Apply Now",
+
 bankTitle:"Bank Information",
+
 bankPurpose:"Membership fee or donations can be made below.",
+
 contactTitle:"Contact",
+
 contactText:"We are open to collaboration and cultural partnerships."
 },
 
 tr:{
 subtitle:"Boşnak Kadınlar Derneği Zambak",
+
 aboutTitle:"Hoş Geldiniz",
+
 aboutText:`"Zambak" kadınları ve ailelerini ortak değerler etrafında birleştirir.`,
+
 joinTitle:"Üyelik",
+
 joinText:"Formu doldurarak başvuru yapabilirsiniz.",
+
 ctaBtn:"Başvuru Yap",
+
 bankTitle:"Banka Bilgileri",
+
 bankPurpose:"Üyelik veya bağış yapılabilir.",
+
 contactTitle:"İletişim",
+
 contactText:"İş birlikleri için iletişime geçebilirsiniz."
 },
 
 bs:{
 subtitle:"Udruženje žena Zambak",
+
 aboutTitle:"Dobrodošli",
+
 aboutText:`"Zambak" okuplja žene porijeklom iz Bosne i Hercegovine, Sandžaka i regije oko zajedničkih vrijednosti i očuvanja identiteta.`,
+
 joinTitle:"Članstvo",
+
 joinText:"Postanite članica Zambaka! Prijavite se putem obrasca.",
+
 ctaBtn:"Prijavi se",
+
 bankTitle:"Bankovni Podaci",
+
 bankPurpose:"Članarina ili donacije.",
+
 contactTitle:"Kontakt",
+
 contactText:"Otvoreni smo za saradnju."
 }
 };
 
 function render(){
-document.getElementById("subtitle").innerText=content[lang].subtitle;
-document.getElementById("aboutTitle").innerText=content[lang].aboutTitle;
-document.getElementById("aboutText").innerText=content[lang].aboutText;
-document.getElementById("joinTitle").innerText=content[lang].joinTitle;
-document.getElementById("joinText").innerText=content[lang].joinText;
-document.getElementById("ctaBtn").innerText=content[lang].ctaBtn;
-document.getElementById("bankTitle").innerText=content[lang].bankTitle;
-document.getElementById("bankPurpose").innerText=content[lang].bankPurpose;
-document.getElementById("contactTitle").innerText=content[lang].contactTitle;
-document.getElementById("contactText").innerText=content[lang].contactText;
+
+document.getElementById("subtitle").innerText = content[lang].subtitle;
+
+document.getElementById("aboutTitle").innerText = content[lang].aboutTitle;
+
+document.getElementById("aboutText").innerText = content[lang].aboutText;
+
+document.getElementById("joinTitle").innerText = content[lang].joinTitle;
+
+document.getElementById("joinText").innerText = content[lang].joinText;
+
+document.getElementById("ctaBtn").innerText = content[lang].ctaBtn;
+
+document.getElementById("bankTitle").innerText = content[lang].bankTitle;
+
+document.getElementById("bankPurpose").innerText = content[lang].bankPurpose;
+
+document.getElementById("contactTitle").innerText = content[lang].contactTitle;
+
+document.getElementById("contactText").innerText = content[lang].contactText;
 }
 
 function switchLang(){
-lang = lang==="en"?"tr":lang==="tr"?"bs":"en";
-render();
+  lang = lang==="en" ? "tr" : lang==="tr" ? "bs" : "en";
+  render();
 }
 
 render();
