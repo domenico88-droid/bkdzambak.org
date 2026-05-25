@@ -1,177 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zambak Association</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Zambak Association</title>
 
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
-  <style>
-    :root {
-      --pink: #f8d7e3;
-      --pink-soft: #fff1f6;
-      --green: #b9d8c2;
-      --text: #2f2f2f;
-      --muted: #666;
-    }
+<style>
+:root{
+  --pink:#f8d7e3;
+  --pink-soft:#fff1f6;
+  --green:#b9d8c2;
+  --text:#2f2f2f;
+  --muted:#666;
+}
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: var(--pink-soft);
-      color: var(--text);
-    }
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background: var(--pink-soft);
+  color:var(--text);
+}
 
-    .container {
-      max-width: 860px;
-      margin: auto;
-      padding: 60px 20px;
-    }
+/* TOP BAR */
+.topbar{
+  position:fixed;
+  top:15px;
+  right:15px;
+  z-index:10;
+}
 
-    .topbar {
-      display: flex;
-      justify-content: flex-end;
-      margin-bottom: 10px;
-    }
+.lang-btn{
+  border:1px solid var(--green);
+  background:white;
+  padding:8px 14px;
+  border-radius:999px;
+  cursor:pointer;
+}
 
-    .lang-btn {
-      border: 1px solid var(--green);
-      background: white;
-      padding: 8px 14px;
-      border-radius: 999px;
-      cursor: pointer;
-      font-size: 14px;
-    }
+/* HERO LAYOUT */
+.hero{
+  display:flex;
+  min-height:100vh;
+}
 
-    .header {
-      text-align: center;
-      margin-bottom: 40px;
-    }
+/* LEFT IMAGE */
+.hero-left{
+  flex:1;
+  background:#eee;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+}
 
-    .logo {
-      width: 90px;
-      height: 90px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid var(--green);
-      margin-bottom: 15px;
-    }
+.hero-left img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  opacity:0.95;
+}
 
-    h1 {
-      margin: 0;
-      font-size: 40px;
-    }
+/* RIGHT CONTENT */
+.hero-right{
+  flex:1;
+  overflow-y:auto;
+  padding:60px 40px;
+}
 
-    .subtitle {
-      color: var(--muted);
-      margin-top: 8px;
-      line-height: 1.5;
-    }
+/* HEADER */
+.logo{
+  width:80px;
+  height:80px;
+  border-radius:50%;
+  border:2px solid var(--green);
+  margin-bottom:10px;
+}
 
-    .card {
-      background: white;
-      border: 1px solid var(--green);
-      border-radius: 18px;
-      padding: 26px;
-      margin-bottom: 18px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.04);
-    }
+h1{
+  margin:0;
+  font-size:40px;
+}
 
-    h2 {
-      margin-top: 0;
-      font-size: 18px;
-    }
+.subtitle{
+  color:var(--muted);
+  margin-bottom:30px;
+}
 
-    p {
-      color: var(--muted);
-      line-height: 1.7;
-    }
+/* CARDS */
+.card{
+  background:white;
+  border:1px solid var(--green);
+  border-radius:16px;
+  padding:22px;
+  margin-bottom:16px;
+}
 
-    .cta-wrap {
-      display: flex;
-      justify-content: flex-end;
-      margin-top: 10px;
-    }
+h2{margin-top:0;}
 
-    .button {
-      background: linear-gradient(135deg, var(--pink), var(--green));
-      border: none;
-      padding: 12px 18px;
-      border-radius: 999px;
-      font-weight: bold;
-      text-decoration: none;
-      color: #2f2f2f;
-    }
+p{color:var(--muted); line-height:1.7;}
 
-    .bank {
-      background: #f9f9f9;
-      border-left: 4px solid var(--green);
-      padding: 14px;
-      border-radius: 12px;
-      font-size: 14px;
-      white-space: pre-line;
-    }
+/* CTA */
+.cta-wrap{
+  display:flex;
+  justify-content:flex-end;
+}
 
-    .socials {
-      text-align: center;
-      margin-top: 35px;
-    }
+.button{
+  background:linear-gradient(135deg,var(--pink),var(--green));
+  padding:12px 18px;
+  border-radius:999px;
+  text-decoration:none;
+  color:#2f2f2f;
+  font-weight:bold;
+}
 
-    .socials a {
-      color: var(--muted);
-      margin: 0 10px;
-      font-size: 22px;
-    }
+/* BANK */
+.bank{
+  background:#f9f9f9;
+  border-left:4px solid var(--green);
+  padding:14px;
+  border-radius:12px;
+  white-space:pre-line;
+  font-size:14px;
+}
 
-    .email {
-      color: var(--text);
-      font-weight: bold;
-      text-decoration: none;
-    }
-  </style>
+/* ANIMATION */
+.card{
+  animation:fade 0.6s ease;
+}
+
+@keyframes fade{
+  from{opacity:0; transform:translateY(10px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero{flex-direction:column;}
+  .hero-left{height:300px;}
+}
+</style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="topbar">
+<button class="lang-btn" onclick="switchLang()">EN / TR / BS</button>
+</div>
 
-  <div class="topbar">
-    <button class="lang-btn" onclick="switchLang()">EN / TR / BS</button>
-  </div>
+<div class="hero">
 
-  <div class="header">
+<!-- LEFT HERO IMAGE -->
+<div class="hero-left">
+  <img src="https://YOUR-GITHUB-USERNAME.github.io/YOUR-REPO/hero.jpg"
+  alt="Zambak Women Group">
+</div>
 
-    <img class="logo"
-      src="https://YOUR-GITHUB-USERNAME.github.io/YOUR-REPO/logo.png"
-      alt="Logo">
+<!-- RIGHT CONTENT -->
+<div class="hero-right">
 
-    <h1>Zambak</h1>
+  <img class="logo"
+  src="https://YOUR-GITHUB-USERNAME.github.io/YOUR-REPO/logo.png"
+  alt="logo">
 
-    <div class="subtitle" id="subtitle"></div>
-  </div>
+  <h1>Zambak</h1>
+  <div class="subtitle" id="subtitle"></div>
 
-  <!-- ABOUT -->
   <div class="card">
     <h2 id="aboutTitle"></h2>
     <p id="aboutText"></p>
   </div>
 
-  <!-- MEMBERSHIP -->
   <div class="card">
     <h2 id="joinTitle"></h2>
     <p id="joinText"></p>
 
     <div class="cta-wrap">
-      <a class="button"
-        href="https://docs.google.com/forms/d/e/1FAIpQLSeEeUXeQR8ubRFosRM4pdYFWVAwRiPpDk_MGUVF4lbLkR-faA/viewform"
-        target="_blank"
-        id="ctaBtn"></a>
+      <a class="button" href="#" id="ctaBtn"></a>
     </div>
   </div>
 
-  <!-- BANK -->
   <div class="card">
     <h2 id="bankTitle"></h2>
     <p id="bankPurpose"></p>
@@ -189,110 +200,75 @@ Açıklama: üyelik / bağış – Ad Soyad
     </div>
   </div>
 
-  <!-- CONTACT -->
   <div class="card">
     <h2 id="contactTitle"></h2>
     <p id="contactText"></p>
-
-    <p>
-      <a class="email" href="mailto:bkd.zambak@gmail.com">
-        bkd.zambak@gmail.com
-      </a>
-    </p>
-  </div>
-
-  <!-- SOCIAL -->
-  <div class="socials">
-    <a href="https://www.youtube.com/@zambak2591" target="_blank">
-      <i class="fab fa-youtube"></i>
-    </a>
-
-    <a href="https://instagram.com/zambak.bkd" target="_blank">
-      <i class="fab fa-instagram"></i>
-    </a>
+    <p>bkd.zambak@gmail.com</p>
   </div>
 
 </div>
+</div>
 
 <script>
-let lang = "en";
+let lang="en";
 
-const content = {
-  en: {
-    subtitle: "Bosniak Women Association Zambak<br>Women • Culture • Community",
+const content={
+en:{
+subtitle:"Bosniak Women Association Zambak",
+aboutTitle:"Welcome",
+aboutText:`"Zambak" is a platform that brings women and their families together around shared values and identity. By activating knowledge and quality, we aim to enrich society through socio-cultural engagement.`,
+joinTitle:"Membership",
+joinText:"Apply using the form below.",
+ctaBtn:"Apply Now",
+bankTitle:"Bank Information",
+bankPurpose:"Membership or donations can be made below.",
+contactTitle:"Contact",
+contactText:"We are open to collaboration and cultural partnerships."
+},
 
-    aboutTitle: "Welcome",
-    aboutText:
-      `"Zambak" is a platform that brings women and their families together around shared values and identity. By activating knowledge and quality, we aim to enrich society and contribute through socio-cultural engagement.`,
+tr:{
+subtitle:"Boşnak Kadınlar Derneği Zambak",
+aboutTitle:"Hoş Geldiniz",
+aboutText:`"Zambak" kadınları ve ailelerini ortak değerler etrafında birleştirir.`,
+joinTitle:"Üyelik",
+joinText:"Formu doldurarak başvuru yapabilirsiniz.",
+ctaBtn:"Başvuru Yap",
+bankTitle:"Banka Bilgileri",
+bankPurpose:"Üyelik veya bağış yapılabilir.",
+contactTitle:"İletişim",
+contactText:"İş birlikleri için iletişime geçebilirsiniz."
+},
 
-    joinTitle: "Membership",
-    joinText: "You can apply for membership using the form below.",
-    ctaBtn: "Apply Now",
-
-    bankTitle: "Bank Information",
-    bankPurpose: "Membership fees or donations can be made to the account below.",
-
-    contactTitle: "Contact",
-    contactText: "We are open to collaboration, cultural projects and partnerships. Feel free to reach out."
-  },
-
-  tr: {
-    subtitle: "Boşnak Kadınlar Derneği Zambak<br>Kadın • Kültür • Dayanışma",
-
-    aboutTitle: "Hoş Geldiniz",
-    aboutText:
-      `"Zambak" kadınları ve ailelerini ortak değerler ve kimlik etrafında bir araya getiren bir platformdur. Bilgi ve birikimi hayata geçirerek topluma katkı sağlamayı ve sosyo-kültürel alanda değer üretmeyi amaçlar.`,
-
-    joinTitle: "Üyelik",
-    joinText: "Aşağıdaki formu doldurarak üyelik başvurusu yapabilirsiniz.",
-    ctaBtn: "Başvuru Yap",
-
-    bankTitle: "Banka Bilgileri",
-    bankPurpose: "Üyelik aidatı veya bağışlar aşağıdaki hesaba yapılabilir.",
-
-    contactTitle: "İletişim",
-    contactText: "İş birliği, kültürel projeler ve ortaklıklar için bizimle iletişime geçebilirsiniz."
-  },
-
-  bs: {
-    subtitle: "Udruženje žena Zambak<br>Kultura • Zajedništvo • Žene",
-
-    aboutTitle: "Dobrodošli",
-    aboutText:
-      `"Zambak" je platforma koja okuplja žene i njihove porodice oko zajedničkih vrijednosti i identiteta. Stavljajući u pogon svoje znanje i kvalitet, želimo obogatiti tursko društvo i dati svoj doprinos kroz sociokulturni angažman.`,
-
-    joinTitle: "Članstvo",
-    joinText: "Možete se prijaviti putem obrasca ispod.",
-    ctaBtn: "Prijava",
-
-    bankTitle: "Bankovni Podaci",
-    bankPurpose: "Članarina ili donacije mogu se uplatiti na račun ispod.",
-
-    contactTitle: "Kontakt",
-    contactText: "Otvoreni smo za saradnju, kulturne projekte i partnerstva. Slobodno nam se obratite."
-  }
+bs:{
+subtitle:"Udruženje žena Zambak",
+aboutTitle:"Dobrodošli",
+aboutText:`"Zambak" okuplja žene i porodice oko zajedničkih vrijednosti i identiteta.`,
+joinTitle:"Članstvo",
+joinText:"Prijavite se putem obrasca.",
+ctaBtn:"Prijava",
+bankTitle:"Bankovni Podaci",
+bankPurpose:"Članarina ili donacije.",
+contactTitle:"Kontakt",
+contactText:"Otvoreni smo za saradnju."
+}
 };
 
-function render() {
-  document.getElementById("subtitle").innerHTML = content[lang].subtitle;
-
-  document.getElementById("aboutTitle").innerText = content[lang].aboutTitle;
-  document.getElementById("aboutText").innerText = content[lang].aboutText;
-
-  document.getElementById("joinTitle").innerText = content[lang].joinTitle;
-  document.getElementById("joinText").innerText = content[lang].joinText;
-  document.getElementById("ctaBtn").innerText = content[lang].ctaBtn;
-
-  document.getElementById("bankTitle").innerText = content[lang].bankTitle;
-  document.getElementById("bankPurpose").innerText = content[lang].bankPurpose;
-
-  document.getElementById("contactTitle").innerText = content[lang].contactTitle;
-  document.getElementById("contactText").innerText = content[lang].contactText;
+function render(){
+document.getElementById("subtitle").innerText=content[lang].subtitle;
+document.getElementById("aboutTitle").innerText=content[lang].aboutTitle;
+document.getElementById("aboutText").innerText=content[lang].aboutText;
+document.getElementById("joinTitle").innerText=content[lang].joinTitle;
+document.getElementById("joinText").innerText=content[lang].joinText;
+document.getElementById("ctaBtn").innerText=content[lang].ctaBtn;
+document.getElementById("bankTitle").innerText=content[lang].bankTitle;
+document.getElementById("bankPurpose").innerText=content[lang].bankPurpose;
+document.getElementById("contactTitle").innerText=content[lang].contactTitle;
+document.getElementById("contactText").innerText=content[lang].contactText;
 }
 
-function switchLang() {
-  lang = lang === "en" ? "tr" : lang === "tr" ? "bs" : "en";
-  render();
+function switchLang(){
+lang = lang==="en"?"tr":lang==="tr"?"bs":"en";
+render();
 }
 
 render();
