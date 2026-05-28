@@ -6,10 +6,8 @@
 
 <title>ZAMBAK Association</title>
 
-<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Aladin&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<!-- Icons -->
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
@@ -28,9 +26,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
   --muted:#d7d7d7;
 }
 
-html{
-  scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth;}
 
 body{
   margin:0;
@@ -44,20 +40,18 @@ body{
   color:var(--text);
 }
 
-/* MAIN OVERLAY */
 .overlay{
   background:var(--overlay);
   min-height:100vh;
-  backdrop-filter:blur(2px);
 }
 
-/* TOP HEADER */
+/* HEADER */
 .topbar{
   position:sticky;
   top:0;
   z-index:999;
   background:rgba(0,63,56,0.58);
-  backdrop-filter:blur(10px);
+  backdrop-filter:blur(14px);
   border-bottom:1px solid rgba(255,255,255,0.08);
 }
 
@@ -70,19 +64,12 @@ body{
   justify-content:space-between;
 }
 
-/* BRAND */
-.brand{
-  display:flex;
-  align-items:center;
-  gap:14px;
-}
+.brand{display:flex;align-items:center;gap:14px;}
 
 .logo{
-  width:62px;
-  height:62px;
-  border-radius:50%;
+  width:62px;height:62px;border-radius:50%;
   object-fit:cover;
-  border:2px solid var(--green);
+  border:2px solid var(--pink);
 }
 
 .brand-text h1{
@@ -90,7 +77,6 @@ body{
   font-family:'Aladin', cursive;
   font-size:44px;
   color:#fff;
-  letter-spacing:1px;
 }
 
 .brand-text p{
@@ -99,48 +85,29 @@ body{
   color:var(--muted);
 }
 
-/* RIGHT SIDE */
-.right-controls{
-  display:flex;
-  align-items:center;
-  gap:16px;
-}
-
 .lang-btn{
-  border:1px solid var(--green);
+  border:1px solid var(--pink);
   background:transparent;
   color:white;
   padding:10px 14px;
   border-radius:999px;
   cursor:pointer;
-  transition:0.3s ease;
 }
 
-.lang-btn:hover{
-  background:rgba(255,255,255,0.08);
-}
-
-/* MENU */
 .menu{
   display:flex;
   justify-content:center;
   gap:28px;
   padding:18px 20px;
-  border-bottom:1px solid rgba(255,255,255,0.08);
 }
 
 .menu a{
   color:#f5f5f5;
   text-decoration:none;
-  font-size:14px;
-  letter-spacing:1px;
   text-transform:uppercase;
-  transition:0.3s ease;
 }
 
-.menu a:hover{
-  color:var(--green);
-}
+.menu a:hover{color:var(--pink);}
 
 /* CONTENT */
 .container{
@@ -149,91 +116,53 @@ body{
   padding:60px 24px 120px;
 }
 
-/* HERO TEXT */
 .hero-intro{
   padding:90px 0 80px;
 }
 
 .hero-intro h2{
   font-size:54px;
-  line-height:1.1;
   margin-bottom:20px;
-  font-weight:700;
+  text-shadow:0 4px 18px rgba(0,0,0,0.35);
 }
 
 .hero-intro p{
-  max-width:650px;
   color:var(--muted);
   line-height:1.9;
-  font-size:17px;
 }
 
-/* CARDS */
 .section-card{
-  background:rgba(255,255,255,0.08);
-  border:1px solid rgba(185,216,194,0.25);
+  background:rgba(232,222,222,0.08);
+  border:1px solid rgba(232,222,222,0.16);
   border-radius:24px;
   padding:38px;
   margin-bottom:28px;
   backdrop-filter:blur(8px);
-  transition:0.3s ease;
+  box-shadow:0 10px 40px rgba(0,0,0,0.18);
 }
 
 .section-card:hover{
   transform:translateY(-3px);
-  border-color:rgba(185,216,194,0.5);
 }
 
-.section-card h3{
-  margin-top:0;
-  font-size:28px;
-  margin-bottom:18px;
-}
-
-.section-card p{
-  color:var(--muted);
-  line-height:1.9;
-}
-
-/* CTA FIXED */
 .floating-cta{
   position:fixed;
   bottom:24px;
   right:24px;
-  z-index:999;
 }
 
 .floating-cta a{
   background:linear-gradient(135deg,var(--pink),var(--green));
   color:#222;
-  text-decoration:none;
   padding:16px 24px;
   border-radius:999px;
   font-weight:700;
-  box-shadow:0 10px 30px rgba(0,0,0,0.25);
-  transition:0.3s ease;
-}
-
-.floating-cta a:hover{
-  transform:translateY(-2px);
-}
-
-/* CONTACT */
-.contact-link{
-  color:white;
-  text-decoration:none;
-  border-bottom:1px solid rgba(255,255,255,0.4);
 }
 
 /* FOOTER */
 footer{
-  background:var(--green-dark);
+  background:#003f38;
   padding:50px 24px;
-}
-
-.footer-inner{
-  max-width:1100px;
-  margin:auto;
 }
 
 .socials{
@@ -243,50 +172,19 @@ footer{
 }
 
 .socials a{
-  width:44px;
-  height:44px;
+  width:44px;height:44px;
   border-radius:50%;
   background:rgba(255,255,255,0.12);
   display:flex;
   align-items:center;
   justify-content:center;
   color:white;
-  text-decoration:none;
-  transition:0.3s ease;
-}
-
-.socials a:hover{
-  background:rgba(255,255,255,0.22);
 }
 
 .bank{
   color:#ebebeb;
   font-size:13px;
   line-height:1.8;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-
-  .top-inner{
-    flex-direction:column;
-    gap:18px;
-    align-items:flex-start;
-  }
-
-  .menu{
-    flex-wrap:wrap;
-    gap:16px;
-  }
-
-  .hero-intro h2{
-    font-size:40px;
-  }
-
-  .section-card{
-    padding:28px;
-  }
-
 }
 
 </style>
@@ -296,346 +194,165 @@ footer{
 
 <div class="overlay">
 
-  <!-- HEADER -->
-  <header class="topbar">
+<header class="topbar">
+<div class="top-inner">
 
-    <div class="top-inner">
+<div class="brand">
+<img class="logo" src="https://domenico88-droid.github.io/bkdzambak.org/logo.jpg">
+<div class="brand-text">
+<h1>ZAMBAK</h1>
+<p id="subtitle"></p>
+</div>
+</div>
 
-      <div class="brand">
-
-        <img class="logo"
-        src="https://domenico88-droid.github.io/bkdzambak.org/logo.jpg"
-        alt="Zambak Logo">
-
-        <div class="brand-text">
-          <h1>ZAMBAK</h1>
-          <p id="subtitle">Bosniak Women Association</p>
-        </div>
-
-      </div>
-
-      <div class="right-controls">
-        <button class="lang-btn" onclick="switchLang()">
-          EN / TR / BS
-        </button>
-      </div>
-
-    </div>
-
-    <!-- MENU -->
-    <nav class="menu">
-      <a href="#about" id="menuAbout">About us</a>
-      <a href="#join" id="menuJoin">Join us</a>
-      <a href="#activities" id="menuActivities">Activities</a>
-      <a href="#contact" id="menuContact">Contact</a>
-    </nav>
-
-  </header>
-
-  <!-- MAIN -->
-  <main class="container">
-
-    <!-- HERO -->
-    <section class="hero-intro">
-
-      <h2 id="heroTitle">
-        Women, culture and identity brought together.
-      </h2>
-
-      <p id="heroText">
-        Zambak is a Bosniak women’s association focused on culture preservation,
-        solidarity, social engagement and community building.
-      </p>
-
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="section-card">
-
-      <h3 id="aboutTitle">About us</h3>
-
-      <p id="aboutText">
-        Placeholder content about the association, mission,
-        values and long-term vision.
-      </p>
-
-    </section>
-
-    <!-- JOIN -->
-    <section id="join" class="section-card">
-
-      <h3 id="joinTitle">Join us</h3>
-
-      <p id="joinText">
-        Placeholder content about membership,
-        participation and becoming part of the community.
-      </p>
-
-    </section>
-
-    <!-- ACTIVITIES -->
-    <section id="activities" class="section-card">
-
-      <h3 id="activitiesTitle">Activities</h3>
-
-      <p id="activitiesText">
-        Placeholder content for workshops,
-        cultural evenings, educational projects and events.
-      </p>
-
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section-card">
-
-      <h3 id="contactTitle">Contact</h3>
-
-      <p id="contactText">
-        We are open to collaborations, partnerships
-        and cultural initiatives.
-      </p>
-
-      <p>
-        <a class="contact-link"
-        href="mailto:bkd.zambak@gmail.com">
-        bkd.zambak@gmail.com
-        </a>
-      </p>
-
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer>
-
-    <div class="footer-inner">
-
-      <div class="socials">
-
-        <a href="https://instagram.com/zambak.bkd"
-        target="_blank">
-          <i class="fab fa-instagram"></i>
-        </a>
-
-        <a href="https://www.youtube.com/@zambak2591"
-        target="_blank">
-          <i class="fab fa-youtube"></i>
-        </a>
-
-      </div>
-
-      <div class="bank">
-        Zambak Boşnak Kadınlar Derneği<br>
-        Vakıf Bank, Çukurambar Şubesi<br>
-        HESAP NO (TL): 00158007318656732<br>
-        IBAN: TR970001500158007318656732<br>
-        Açıklama: üyelik / bağış – Ad Soyad
-      </div>
-
-    </div>
-
-  </footer>
+<button class="lang-btn" onclick="switchLang()">EN / TR / BS</button>
 
 </div>
 
-<!-- FLOATING CTA -->
-<div class="floating-cta">
-  <a
-  href="https://docs.google.com/forms/d/e/1FAIpQLSeEeUXeQR8ubRFosRM4pdYFWVAwRiPpDk_MGUVF4lbLkR-faA/viewform"
-  target="_blank">
-  Join us
-  </a>
+<nav class="menu">
+<a href="#about" id="menuAbout"></a>
+<a href="#join" id="menuJoin"></a>
+<a href="#activities" id="menuActivities"></a>
+<a href="#contact" id="menuContact"></a>
+</nav>
+</header>
+
+<main class="container">
+
+<section class="hero-intro">
+<h2 id="heroTitle"></h2>
+<p id="heroText"></p>
+</section>
+
+<section id="about" class="section-card">
+<h3 id="aboutTitle"></h3>
+<p id="aboutText"></p>
+</section>
+
+<section id="join" class="section-card">
+<h3 id="joinTitle"></h3>
+<p id="joinText"></p>
+</section>
+
+<section id="activities" class="section-card">
+<h3 id="activitiesTitle"></h3>
+<p id="activitiesText"></p>
+</section>
+
+<section id="contact" class="section-card">
+<h3 id="contactTitle"></h3>
+<p id="contactText"></p>
+</section>
+
+</main>
+
+<footer>
+<div class="socials">
+<a href="https://instagram.com/zambak.bkd"><i class="fab fa-instagram"></i></a>
+<a href="https://www.youtube.com/@zambak2591"><i class="fab fa-youtube"></i></a>
+</div>
+
+<div class="bank">
+Zambak Association<br>
+IBAN: TR970001500158007318656732
+</div>
+</footer>
+
 </div>
 
 <script>
 
-let lang = "en";
+let lang="en";
 
-const content = {
+const content={
 
 en:{
-
 subtitle:"Bosniak Women Association",
-
 menuAbout:"About us",
 menuJoin:"Join us",
 menuActivities:"Activities",
 menuContact:"Contact",
-
 heroTitle:"Women, culture and identity brought together.",
-
-heroText:`Zambak is a Bosniak women’s association focused on cultural preservation, solidarity, social engagement and community building.`,
-
+heroText:"Zambak is a Bosniak women’s association focused on culture, solidarity and community.",
 aboutTitle:"About us",
-
-aboutText:`“Zambak” brings together Bosniak women around shared values and identity.
-The idea for establishing the Women’s Association “Zambak” emerged from the need to connect and empower women who share common ethnic and cultural values through an institutional and professional approach, while also enabling their successful integration into Turkish society.
-The association brings together the last generation of women originating from Bosnia and Herzegovina, as well as Bosniak women from Croatia, Montenegro, Serbia, North Macedonia, and Kosovo, who are currently residing in the Republic of Türkiye for various reasons.
-The ultimate goal of “Zambak” is to encourage women to use their knowledge and talents to enrich the communities in which they live, thereby ensuring a happier and higher-quality life for themselves and their families.
-The headquarters of the Women’s Association “Zambak” is located in Ankara, with representative offices in Istanbul, Bursa, Izmir, and Sakarya.`,
-
+aboutText:"Zambak connects women through shared identity and cultural values.",
 joinTitle:"Join us",
-
-joinText:`Become part of the Zambak community through membership and participation.`,
-
+joinText:"Become part of our community.",
 activitiesTitle:"Activities",
-
-activitiesText:`Activities
-Organizing social gatherings for women and children (iftars, picnics, etc.)<br>
-Social, cultural, and sports activities<br>
-Group trips to other cities and social gatherings<br>
-Psychological empowerment of women through workshops and educational programs<br>
-Educational activities for women and children about shared history, culture, and language<br>
-Assisting women in learning the Turkish language<br>
-Introducing Turkish culture and historical landmarks<br>
-Providing support in education, self-employment, professional employment, and retraining programs to facilitate easier adaptation to a new environment<br><br>
-Sections<br><br>
-Bosnian Language Section<br>
-Book Club<br>
-“Zambak” OASIS`,<br>
-
+activitiesText:`Organizing social gatherings, cultural events, education and empowerment programs.`,
 contactTitle:"Contact",
-
-contactText:`We are open to collaborations, partnerships and cultural initiatives.`
-
+contactText:"Contact us for collaborations."
 },
 
 tr:{
-
 subtitle:"Boşnak Kadınlar Derneği",
-
 menuAbout:"Hakkımızda",
 menuJoin:"Bize Katılın",
 menuActivities:"Faaliyetler",
 menuContact:"İletişim",
-
 heroTitle:"Kadınları, kültürü ve kimliği bir araya getiriyoruz.",
-
-heroText:`Zambak kültür, dayanışma ve toplumsal katkıya odaklanan bir Boşnak kadın derneğidir.`,
-
+heroText:"Zambak kültür ve dayanışma derneğidir.",
 aboutTitle:"Hakkımızda",
-
-aboutText:`“Zambak” Kadınlar Derneği’nin kurulması fikri, ortak etnik ve kültürel değerlere sahip kadınların kurumsal ve profesyonel bir yaklaşımla bir araya getirilmesi, güçlendirilmesi ve Türk toplumuna başarılı bir şekilde entegre olmalarının sağlanması ihtiyacından doğmuştur.
-Dernek; Bosna Hersek kökenli son nesil kadınları, ayrıca Hırvatistan, Karadağ, Sırbistan, Kuzey Makedonya ve Kosova’dan gelen ve çeşitli nedenlerle Türkiye Cumhuriyeti’nde yaşamlarını sürdüren Boşnak kadınları bir araya getirmektedir.
-“Zambak”ın nihai amacı, kadınların sahip oldukları bilgi ve yetenekleri kullanarak yaşadıkları toplulukları zenginleştirmelerini sağlamak; böylece kendileri ve aileleri için daha mutlu ve daha kaliteli bir yaşam oluşturmalarına katkıda bulunmaktır.
-“Zambak” Kadınlar Derneği’nin merkezi Ankara’da bulunmakta olup İstanbul, Bursa, İzmir ve Sakarya’da temsilcilikleri bulunmaktadır.`,
-
+aboutText:"Zambak kadınları bir araya getirir.",
 joinTitle:"Bize Katılın",
-
-joinText:`Üyelik ve katılım yoluyla Zambak topluluğunun bir parçası olun.`,
-
+joinText:"Topluluğumuza katılın.",
 activitiesTitle:"Faaliyetler",
-
-activitiesText:`Atölyeler, kültür geceleri, eğitim buluşmaları ve ortak projeler.`,
-
+activitiesText:"Sosyal ve kültürel faaliyetler.",
 contactTitle:"İletişim",
-
-contactText:`İş birlikleri ve kültürel girişimler için bizimle iletişime geçebilirsiniz.`
-
+contactText:"Bizimle iletişime geçin."
 },
 
 bs:{
-
 subtitle:"Udruženje žena Zambak",
-
 menuAbout:"O nama",
 menuJoin:"Pridruži se",
 menuActivities:"Aktivnosti",
 menuContact:"Kontakt",
-
-heroTitle:"Žene: zajedništvo, kultura i identitet.",
-
-heroText:`Zambak je udruženje žena fokusirano na očuvanje kulture, zajedništvo i društveni angažman.`,
-
+heroTitle:"Žene, kultura i identitet.",
+heroText:"Zambak okuplja žene.",
 aboutTitle:"O nama",
-
-aboutText:`"Zambak" okuplja žene bošnjakinje oko zajedničkih vrijednosti i identiteta.
-Ideja o osnivanju Udruženja žena "Zambak" nastala je iz
-potrebe da se kroz institucionaliziran i profesionalan pristup
-povežu i osnaže žene koje dijele zajedničke etničke i
-kulturološke vrijednosti i omogući njihova uspješna integracija
-u tursko društvo. Udruženje okuplja posljednju generaciju
-žena porijeklom iz Bosne i Hercegovine, Bošnjakinje iz
-Hrvatske, Crne Gore, Srbije, Sjeverne Makedonije i Kosova
-koje su različitim povodom trenutno nastanjene u Republici
-Turskoj.
-Konačan cilj "Zambaka" je utjecati na žene da koristeći svoja
-znanja i talente, obogate zajednice u kojima žive te tako sebi i
-svojim porodicama osiguraju sretniji i kvalitetniji život.
-Centar Udruženja žena "Zambak" je u Ankari, a predstavništva
-se nalaze u Istanbulu, Bursi, Izmiru i Sakarji.<br>
-
-MISIJA <br>
-Povezivanje i jačanje članica "Zambaka" u Turskoj kroz druženja, realizacije projekata i razne kulturne i društvene aktivnosti, podizanje svijesti o zajedničkim vrijednostima i jačanje istih, očuvanje i promociju zajedničkog identiteta, razmjenu znanja, iskustava i međusobne podrške, realizaciju projekata za djecu i podržavanje uspješne integracije žena u tursko društvo.<br> 
-VIZIJA<br> 
-Postati vodeće i najjače udruženje za žene porijeklom iz balkanskih zemalja u Turskoj i njihovo sigurno mjesto okupljanja te učiniti zajednicu informiranijom, svjesnijom i aktivnijom.<br> 
-VRIJEDNOSTI<br> 
-Volonterizam <br>Apolitičnost<br> 
-Rad koji poštuje prirodu žene <br>
-Patriotizam i osjećaj odgovornosti prema zajednici <br>
-Transparentnost i iskrenost<br>
-Odsustvo predrasuda<br>
-Otvorena i nenasilna komunikacija <br>
-Strpljenje i ustrajnost<br>`,
-
+aboutText:"Zambak povezuje žene.",
 joinTitle:"Pridruži se",
-
-joinText:`Postani dio zajednice Zambak kroz članstvo i aktivno učešće.`,
-
+joinText:"Postani dio zajednice.",
 activitiesTitle:"Aktivnosti",
-
-activitiesText:`Aktivnosti<br> 
-- Organiziranje druženja za žene i za djecu (iftar, piknik, isl.) <br>
-- socijalno-kulturne i sportske aktivnosti, <br>
-- zajednička putovanja u druge gradove i druženja, <br>
-- psihološko osnaživanje žena (radionice, edukacije) <br>
-- Edukacije žena i djece o zajedničkoj historiji, kulturi i jeziku <br>
-- Pomoć ženama u učenju turskog jezika, <br>
-- upoznavanje turske kulture i znamenitosti, <br>
-- podrška u obrazovanju, samozapošljavanju, zapošljavanju u struci, prekvalifikaciji radi lakše adaptacije u novu sredinu <br>
-<br>
-Sekcije: <br>
-- Sekcija bosanskog jezika <br>
-- Klub knjige <br>
-- "Zambakova" OAZA`,
-
+activitiesText:`- Druženja
+- Edukacije
+- Putovanja
+- Osnaživanje žena
+- Jezik i kultura`,
 contactTitle:"Kontakt",
-
-contactText:`Otvoreni smo za saradnju, partnerstva i kulturne inicijative.`
-
+contactText:"Kontaktirajte nas."
 }
 
 };
 
 function render(){
 
-document.getElementById("subtitle").innerText = content[lang].subtitle;
+document.getElementById("subtitle").innerText=content[lang].subtitle;
 
-document.getElementById("menuAbout").innerText = content[lang].menuAbout;
-document.getElementById("menuJoin").innerText = content[lang].menuJoin;
-document.getElementById("menuActivities").innerText = content[lang].menuActivities;
-document.getElementById("menuContact").innerText = content[lang].menuContact;
+["menuAbout","menuJoin","menuActivities","menuContact"].forEach(id=>{
+document.getElementById(id).innerText=content[lang][id];
+});
 
-document.getElementById("heroTitle").innerText = content[lang].heroTitle;
-document.getElementById("heroText").innerText = content[lang].heroText;
+document.getElementById("heroTitle").innerText=content[lang].heroTitle;
+document.getElementById("heroText").innerText=content[lang].heroText;
 
-document.getElementById("aboutTitle").innerText = content[lang].aboutTitle;
-document.getElementById("aboutText").innerText = content[lang].aboutText;
+document.getElementById("aboutTitle").innerText=content[lang].aboutTitle;
+document.getElementById("aboutText").innerHTML=content[lang].aboutText;
 
-document.getElementById("joinTitle").innerText = content[lang].joinTitle;
-document.getElementById("joinText").innerText = content[lang].joinText;
+document.getElementById("joinTitle").innerText=content[lang].joinTitle;
+document.getElementById("joinText").innerHTML=content[lang].joinText;
 
-document.getElementById("activitiesTitle").innerText = content[lang].activitiesTitle;
-document.getElementById("activitiesText").innerText = content[lang].activitiesText;
+document.getElementById("activitiesTitle").innerText=content[lang].activitiesTitle;
+document.getElementById("activitiesText").innerHTML=content[lang].activitiesText;
 
-document.getElementById("contactTitle").innerText = content[lang].contactTitle;
-document.getElementById("contactText").innerText = content[lang].contactText;
+document.getElementById("contactTitle").innerText=content[lang].contactTitle;
+document.getElementById("contactText").innerHTML=content[lang].contactText;
 
 }
 
 function switchLang(){
-lang = lang === "en" ? "tr" : lang === "tr" ? "bs" : "en";
+lang=lang==="en"?"tr":lang==="tr"?"bs":"en";
 render();
 }
 
